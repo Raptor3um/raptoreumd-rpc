@@ -1,22 +1,22 @@
-ravend-rpc.js
+raptoreumd-rpc.js
 ===============
 
-A client library to connect to Ravencoin RPC in JavaScript.
+A client library to connect to Raptoreum RPC in JavaScript.
 
 ## Get Started
 
-ravend-rpc.js runs on [node](http://nodejs.org/)
+raptoreumd-rpc.js runs on [node](http://nodejs.org/)
 
 ```bash
-npm install ravend-rpc
+npm install raptoreumd-rpc
 ```
 
 ## Examples
 
 ```javascript
 var run = function() {
-  var ravencore = require('ravencore');
-  var RpcClient = require('ravend-rpc');
+  var rtmcore = require('rtmcore');
+  var RpcClient = require('raptoreumd-rpc');
 
   var config = {
     protocol: 'http',
@@ -52,7 +52,7 @@ var run = function() {
         }
 
         rawtxs.map(function (rawtx) {
-          var tx = new ravencore.Transaction(rawtx.result);
+          var tx = new rtmcore.Transaction(rawtx.result);
           console.log('\n\n\n' + tx.id + ':', tx.toObject());
         });
 
